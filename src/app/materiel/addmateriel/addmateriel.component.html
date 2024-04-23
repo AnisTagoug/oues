@@ -1,0 +1,35 @@
+<div class="home_content">
+
+
+    <br>
+    <div style="padding : 40px;">
+  
+    <div class="card text-center" style="width: 80rem;padding : 10px" >
+  
+      <div class="card-header">
+      <b> Ajouter Materiel</b>
+    </div>
+    <div class="card-body">
+    
+      <div class="input-group mb-3">
+  
+        <input type="text" class="form-control" [(ngModel)]="fournisseur.intitule" placeholder="intitule" aria-label="name" aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group mb-3">
+  
+        <input type="number" class="form-control" [(ngModel)]="fournisseur.nbPieces" placeholder="nbr de places" aria-label="tel" aria-describedby="basic-addon1">
+      </div>
+      <div class="input-group mb-3">
+        <select class="form-select" [(ngModel)]="fournisseur.pack" aria-label="Pack">
+          <option *ngFor="let pack of packs" [value]="pack">{{ pack }}</option>
+        </select>
+      </div>
+  
+  
+                      <button  (click)="ajouter()"   class="btn btn-primary pull-right">Ajouter materiel</button>
+                      <div class="clearfix"></div>
+  
+                  </div>
+                </div>
+              </div>
+  
